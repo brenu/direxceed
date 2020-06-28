@@ -6,4 +6,4 @@ DirExceed is a tool that, given a txt wordlist, looks for existing directories i
 
 ## Project stage
 
-At the present moment, DirExceed is just beginning, so I will let only a Hello World on the master branch :)
+At the present moment, DirExceed can take a test.txt file and check if the URLs inside are valid, but it's not the project reason, so it's definitely not complete yet.
