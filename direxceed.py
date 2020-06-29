@@ -1,14 +1,14 @@
 import requests
 import sys
 
-# Initializing variables
-counter = 0
+if len(sys.argv) - 1 > 0:
+    # Initializing variables
+    counter = 0
 
-# Opening file
-f = open('test.txt', 'r')
+    # Opening file
+    f = open('test.txt', 'r')
 
-# Looking for available pages inside the wordlist
-if len(sys.argv) - 1 > 1:
+    # Looking for available pages inside the wordlist
     for i in f:
         t = i
         i = t[:-1]
