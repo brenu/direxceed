@@ -1,12 +1,12 @@
 import requests
 import sys
 
-if len(sys.argv) - 1 > 0:
+if len(sys.argv) - 1 > 1:
     # Initializing variables
     counter = 0
 
     # Opening file
-    f = open('test.txt', 'r')
+    f = open(sys.argv[2], 'r')
 
     # Looking for available pages inside the wordlist
     for i in f:
@@ -23,8 +23,8 @@ if len(sys.argv) - 1 > 0:
     print('The wordlist has {} valid directories'.format(counter))
 else: 
     print()
-    print('                        DirExceed                        ')
-    print('                 Created by brenu (Exceed)               ')
+    print('                    DirExceed - v1.0                     ')
+    print('                Created by brenu (Exceed)                ')
     print()
-    print('                         Usage                           ')
-    print('--------- python3 direxceed.py www.example.com ----------')
+    print('                          Usage                          ')
+    print('->    python3 direxceed.py www.example.com file.txt    <-')
