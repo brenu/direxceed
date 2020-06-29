@@ -1,4 +1,5 @@
 import requests
+import sys
 
 # Initializing variables
 counter = 0
@@ -10,7 +11,7 @@ f = open('test.txt', 'r')
 for i in f:
     t = i
     i = t[:-1]
-    url = 'https://www.google.com{}'.format(i)
+    url = 'https://{}{}'.format(sys.argv[1],i)
     try:
         request = requests.get(url)
         if request.status_code == 200:
