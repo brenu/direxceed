@@ -16,7 +16,13 @@ if len(sys.argv) - 1 > 1:
         try:
             request = requests.get(url)
             if request.status_code == 200:
-                print('Directory {} exists'.format(url))
+                print('Directory {} exists ({})'.format(url,request.status_code))
+                counter = counter + 1
+            elif request.status_code == 301 or request.status_code == 307:
+                print('Directory {} was moved ({})'.format(url,request.status_code))
+                counter = counter + 1
+            elif request.status_code == 401 or request.status_code == 403:
+                print('Directory {} exists, but you cannot access ({})'.format(url,request.status_code))
                 counter = counter + 1
         except:
             counter = counter
